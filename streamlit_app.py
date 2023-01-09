@@ -49,7 +49,7 @@ st.session_state["counter"] += 1
 
 st.write("At the bottom you should see debug div")
 st.write(
-    "Debug div has info regarding: time of calculation, line where debug command is put and saved debug info. Hit R to recalculate app."
+    "Debug div has info regarding: time of calculation, line where debug command is put and saved debug info. Hit R to recalculate the app."
 )
 
 
