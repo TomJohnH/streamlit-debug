@@ -20,17 +20,28 @@ local_css("debug.css")
 st.title("This is an app")
 st.write("Check how you can debug you code and view variables directely in Streamlit:")
 
-st.write("1. Create a matrix np.matrix('1 2; 3 4')")
+st.write("1. Create a matrix")
+st.code(
+    """a = np.matrix("1 2; 3 4")
+d.debug("this presents state of the matrix " + str(a))"""
+)
 a = np.matrix("1 2; 3 4")
-st.write(a)
 d.debug("this presents state of the matrix " + str(a))
 
 st.write("2. Create a counter in session state")
 
-if "counter" not in st.session_state:
+st.code(
+    """if "counter" not in st.session_state:
     st.session_state["counter"] = 1
 
-st.write(st.session_state["counter"])
+d.debug("counter " + str(st.session_state["counter"]))
+
+st.session_state["counter"] += 1"""
+)
+
+
+if "counter" not in st.session_state:
+    st.session_state["counter"] = 1
 
 d.debug("counter " + str(st.session_state["counter"]))
 
@@ -38,7 +49,7 @@ st.session_state["counter"] += 1
 
 st.write("At the bottom you should see debug div")
 st.write(
-    "Debug div has info regarding: time of calculation, line where debug command is put and saved debug calc "
+    "Debug div has info regarding: time of calculation, line where debug command is put and saved debug info "
 )
 
 
