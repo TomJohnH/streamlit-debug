@@ -18,7 +18,9 @@ local_css("debug.css")
 
 
 st.title("This is an app")
-st.write("Check how you can debug you code and view variables directely in Streamlit:")
+st.write(
+    "This is an example how you can debug your code and view variables directely in sticky bottom debug div:"
+)
 
 st.write("1. Create a matrix")
 st.code(
@@ -49,9 +51,8 @@ st.session_state["counter"] += 1
 
 st.write("At the bottom you should see debug div")
 st.write(
-    "Debug div has info regarding: time of calculation, line where debug command is put and saved debug info. Hit R to recalculate the app."
+    "Debug div has info regarding: time of calculation, line from which debug command was executed and saved debug info. Hit R to recalculate the app."
 )
-
 
 # ----- [DEBUG DIV] initize debug elements -----
 
