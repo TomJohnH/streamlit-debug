@@ -1,0 +1,16 @@
+.debug {
+    padding-left: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    /* background-color: darkslateblue; */
+    background-color: #333;
+    color: #ccc;
+    width: 100%;
+    overflow: auto;
+    font-family: monospace;
+
+
+}
