@@ -49,9 +49,9 @@ d.debug("counter " + str(st.session_state["counter"]))
 
 st.session_state["counter"] += 1
 
-st.write("At the bottom you should see debug div")
+st.write("At the bottom of the app you should see a debug div.")
 st.write(
-    "Debug div has info regarding: time of calculation, line from which debug command was executed and saved debug info. Hit R to recalculate the app."
+    "Debug div contains info about: time of calculation, line from which debug command was executed and saved debug info. Hit R to recalculate the app."
 )
 
 # ----- [DEBUG DIV] initize debug elements -----
