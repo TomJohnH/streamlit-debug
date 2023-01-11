@@ -1,6 +1,6 @@
 # streamlit-debug
 
-A handy tool for streamlit app debugging.
+A handy tool for streamlit app debugging. Example: [https://stdebug.streamlit.app/s](https://stdebug.streamlit.app/)
 
 ## Usage:
 
