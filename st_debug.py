@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 from inspect import getframeinfo, stack
 
-# ----- [DEBUG] initize debug elements -----
+# ----- Function storing debug info -----
 
 
 def debug(input):
@@ -23,3 +23,31 @@ def debug(input):
         + "</div>"
         + st.session_state["debug_string"]
     )
+
+
+# ----- function storing js script for CTRL + Q toggle -----
+
+
+def js_code():
+    return """
+    <script>
+    function myFunction() {
+    
+    var x = window.parent.document.getElementById("debug");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+
+    function KeyPress(e) {
+        var evtobj = window.event? event : e
+        if (evtobj.keyCode == 81 && evtobj.ctrlKey) myFunction();
+    }
+
+    const doc = window.parent.document;
+    doc.onkeydown = KeyPress;
+
+    </script>
+    """

@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import st_debug as d
 import numpy as np
 import random
@@ -58,6 +59,12 @@ st.write(
 
 if "debug_string" in st.session_state:
     st.markdown(
-        f'<div class="debug">{ st.session_state["debug_string"]}</div>',
+        f'<div class="debug" id="debug">{ st.session_state["debug_string"]}</div>',
         unsafe_allow_html=True,
     )
+
+components.html(
+    d.js_code(),
+    height=0,
+    width=0,
+)
