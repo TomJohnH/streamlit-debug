@@ -10,7 +10,7 @@ def debug(input):
         st.session_state["debug_string"] = "<b>Debug window ☝️</b>"
     now = datetime.datetime.now()
     st.session_state["debug_string"] = (
-        "<div style='border-bottom: dotted; border-width: thin;border-color: #cccccc;'>"
+        "<div style='border-bottom: dotted; border-width: thin;border-color: #cccccc;'><span style='color:grey;'>"
         + str(now.hour)
         + ":"
         + str(now.minute)
@@ -18,7 +18,7 @@ def debug(input):
         + str(now.second)
         + " Debug.print["
         + str(getframeinfo(stack()[1][0]).lineno)
-        + "] "
+        + "]:</span> "
         + str(input)
         + "</div>"
         + st.session_state["debug_string"]

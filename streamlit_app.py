@@ -54,7 +54,8 @@ st.write("At the bottom of the app you should see a debug div.")
 st.write(
     "Debug div contains info about: time of calculation, line from which debug command was executed and saved debug info."
 )
-st.write("Hit R to recalculate the app.")
+
+st.button("Hit R to recalculate the app or click me")
 st.write("Hit CTRL + Q to hide the div.")
 
 # ----- [DEBUG DIV] initize debug elements -----
