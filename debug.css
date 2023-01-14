@@ -5,10 +5,10 @@
     left: 0;
     right: 0;
     max-height: 200px;
-    /* background-color: darkslateblue; */
-    background-color: #333;
+    background-color: #21212f;
     color: #ccc;
     width: 100%;
     overflow: auto;
     font-family: monospace;
+    border-top: 3px solid #2b2a3a;
 }
