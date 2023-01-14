@@ -37,3 +37,10 @@ if "debug_string" in st.session_state:
 a = np.matrix("1 2; 3 4")
 d.debug("this presents state of the matrix " + str(a))
 ```
+
+## Changelog:
+
+14.01.2023
+
+- css update, new better visuals
+
